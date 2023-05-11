@@ -1,0 +1,135 @@
+<!DOCTYPE html> <html><head>
+        <title>Unit 5 project </title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: lightgray;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+}
+.name-button {
+    height: 30px;
+}
+.dropbtn:hover, .dropbtn:focus {
+  background-color:gray;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+    text-align: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: center;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}</style></head>
+    <body>
+        <div class="title">
+            <h1>What Marvel Character are you?</h1>
+        </div>
+       
+            
+            <img src="https://thumbor.bigedition.com/where-your-favorite-marvel-superheroes-are-from/066dzaszWCGH5E0OQQINLUvFpWc=/0x367:1538x1905/500x500/filters:quality(80)/granite-web-prod/8d/11/8d11169b33d044e886654343f8565457.jpeg">
+         <div class="questions">
+           <label>Do you want power or no power?</label>
+            <div>
+                
+                 <input class="name-input" placeholder="power or no power">
+                
+            </div>
+             <div>
+            <h3>What's your age?</h3>
+             </div>
+               <input class="oclass" placeholder="Enter a number!">
+               
+             <div>
+                
+                                       
+            </div>
+            
+             <div>
+             <h3>Are you athletic or like staying at home?</h3>
+             </div>
+             <div>
+                 
+                 
+  
+
+          
+
+ 
+               <input class="SClass" placeholder="Althletic or staying home">
+                <button class="button">Submit</button>
+             </div>
+        </div>
+     
+  
+        <div class="result">
+            this is where the user will see their quiz result! 
+        </div>
+         <button class="restart-button">Restart?</button>
+
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var Name = document.querySelector(".Choose-button");
+var Age = document.querySelector(".Age-button");
+var correctquestion = document.querySelector("Power");
+var restart = document.querySelector(" .restart-button");
+var questions = document.querySelector(".questions");
+var button = document.querySelector("button");
+var Power = document.querySelector("questions");
+var result = document.querySelector(".result");
+
+button.onclick = function () {
+  var NameInput = document.querySelector(".name-input").value;
+  var oclass = document.querySelector(".oclass").value;
+  var SClass = document.querySelector(".SClass").value;
+
+  if (NameInput === correctquestion && oclass <= 15 && SClass === "athletic") {
+    alert("Your Black Widow");
+  }
+}; // else if ( ( username === correctUsername) &&
+//    (password !== correctPassword)) {
+// alert("Wrong Password");
+// }
+// else if ( ( username !== correctUsername) &&
+//   (password === correctPassword)) {
+//alert("Wrong Username");
+//}
+//else if ( ( username !== correctUsername) ||
+//   (password !== correctPassword)) {
+//alert("Incorrect username and password");
+// }
+// else if ( ( username === " ") ||
+//     (password === " ")) {
+//alert("Incorrect username and password");
+//}
+
+
+{
+  result.style.display = "block";
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbIk5hbWUiLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJBZ2UiLCJjb3JyZWN0cXVlc3Rpb24iLCJyZXN0YXJ0IiwicXVlc3Rpb25zIiwiYnV0dG9uIiwiUG93ZXIiLCJyZXN1bHQiLCJvbmNsaWNrIiwiTmFtZUlucHV0IiwidmFsdWUiLCJvY2xhc3MiLCJTQ2xhc3MiLCJhbGVydCIsInN0eWxlIiwiZGlzcGxheSJdLCJtYXBwaW5ncyI6IkFBQ0EsSUFBSUEsSUFBSSxHQUFHQyxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsZ0JBQXZCLENBQVg7QUFDQSxJQUFJQyxHQUFHLEdBQUdGLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixhQUF2QixDQUFWO0FBQ0EsSUFBSUUsZUFBZSxHQUFHSCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsT0FBdkIsQ0FBdEI7QUFDQSxJQUFJRyxPQUFPLEdBQUdKLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixrQkFBdkIsQ0FBZDtBQUNBLElBQUlJLFNBQVMsR0FBR0wsUUFBUSxDQUFDQyxhQUFULENBQXVCLFlBQXZCLENBQWhCO0FBQ0EsSUFBSUssTUFBTSxHQUFHTixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsUUFBdkIsQ0FBYjtBQUNBLElBQUlNLEtBQUssR0FBR1AsUUFBUSxDQUFDQyxhQUFULENBQXVCLFdBQXZCLENBQVo7QUFDQSxJQUFJTyxNQUFNLEdBQ05SLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixDQURKOztBQUdBSyxNQUFNLENBQUNHLE9BQVAsR0FBZ0IsWUFBVTtBQUN4QixNQUFJQyxTQUFTLEdBQUdWLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixhQUF2QixFQUFzQ1UsS0FBdEQ7QUFDRSxNQUFJQyxNQUFNLEdBQUdaLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixFQUFrQ1UsS0FBL0M7QUFDQSxNQUFJRSxNQUFNLEdBQUdiLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixFQUFrQ1UsS0FBL0M7O0FBRUgsTUFBS0QsU0FBUyxLQUFLUCxlQUFmLElBQ0VTLE1BQU0sSUFBSSxFQUFWLElBQWdCQyxNQUFNLEtBQUssVUFEakMsRUFDOEM7QUFDekNDLElBQUFBLEtBQUssQ0FBQyxrQkFBRCxDQUFMO0FBQTJCO0FBQy9CLENBUkYsQyxDQVVJO0FBQ0M7QUFDRjtBQUNBO0FBQ0E7QUFDRztBQUNGO0FBQ0E7QUFDQTtBQUNFO0FBQ0Y7QUFDRDtBQUNEO0FBQ0U7QUFDQTtBQUNBOzs7QUFHSjtBQUNRTixFQUFBQSxNQUFNLENBQUNPLEtBQVAsQ0FBYUMsT0FBYixHQUF1QixPQUF2QjtBQUNIIiwic291cmNlc0NvbnRlbnQiOlsiXG5sZXQgTmFtZSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuQ2hvb3NlLWJ1dHRvblwiKTtcbmxldCBBZ2UgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLkFnZS1idXR0b25cIik7XG5sZXQgY29ycmVjdHF1ZXN0aW9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIlBvd2VyXCIpO1xubGV0IHJlc3RhcnQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiIC5yZXN0YXJ0LWJ1dHRvblwiKTtcbmxldCBxdWVzdGlvbnMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnF1ZXN0aW9uc1wiKTtcbmxldCBidXR0b24gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiYnV0dG9uXCIpO1xubGV0IFBvd2VyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcInF1ZXN0aW9uc1wiKTtcbmxldCByZXN1bHQgPSBcbiAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLnJlc3VsdFwiKTtcblxuYnV0dG9uLm9uY2xpY2s9IGZ1bmN0aW9uKCl7XG4gIGxldCBOYW1lSW5wdXQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLm5hbWUtaW5wdXRcIikudmFsdWU7XG4gICAgbGV0IG9jbGFzcyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIub2NsYXNzXCIpLnZhbHVlO1xuICAgIGxldCBTQ2xhc3MgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLlNDbGFzc1wiKS52YWx1ZTtcbiAgICBcbiBpZiggKE5hbWVJbnB1dCA9PT0gY29ycmVjdHF1ZXN0aW9uKSYmXG4gICAgICAob2NsYXNzIDw9IDE1ICYmIFNDbGFzcyA9PT0gXCJhdGhsZXRpY1wiICkpe1xuICAgICAgYWxlcnQoXCJZb3VyIEJsYWNrIFdpZG93XCIpO31cbiB9O1xuXG4gICAgLy8gZWxzZSBpZiAoICggdXNlcm5hbWUgPT09IGNvcnJlY3RVc2VybmFtZSkgJiZcbiAgICAgLy8gICAgKHBhc3N3b3JkICE9PSBjb3JyZWN0UGFzc3dvcmQpKSB7XG4gICAvLyBhbGVydChcIldyb25nIFBhc3N3b3JkXCIpO1xuICAgLy8gfVxuICAgLy8gZWxzZSBpZiAoICggdXNlcm5hbWUgIT09IGNvcnJlY3RVc2VybmFtZSkgJiZcbiAgICAgIC8vICAgKHBhc3N3b3JkID09PSBjb3JyZWN0UGFzc3dvcmQpKSB7XG4gICAgLy9hbGVydChcIldyb25nIFVzZXJuYW1lXCIpO1xuICAgIC8vfVxuICAgIC8vZWxzZSBpZiAoICggdXNlcm5hbWUgIT09IGNvcnJlY3RVc2VybmFtZSkgfHxcbiAgICAgIC8vICAgKHBhc3N3b3JkICE9PSBjb3JyZWN0UGFzc3dvcmQpKSB7XG4gICAgLy9hbGVydChcIkluY29ycmVjdCB1c2VybmFtZSBhbmQgcGFzc3dvcmRcIik7XG4gICAvLyB9XG4gIC8vIGVsc2UgaWYgKCAoIHVzZXJuYW1lID09PSBcIiBcIikgfHxcbiAgICAvLyAgICAgKHBhc3N3b3JkID09PSBcIiBcIikpIHtcbiAgICAvL2FsZXJ0KFwiSW5jb3JyZWN0IHVzZXJuYW1lIGFuZCBwYXNzd29yZFwiKTtcbiAgICAvL31cblxuXG57ICBcbiAgICAgICAgcmVzdWx0LnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG4gICAgfVxuXG5cblxuXG5cblxuXG5cblxuXG5cblxuXG5cblxuXG5cblxuXG5cblxuXG5cblxuXG5cblxuIl19</script></body></html>
